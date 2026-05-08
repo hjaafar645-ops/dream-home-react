@@ -16,21 +16,17 @@ The application features:
 
 ## 🛠️ Technologies Used
 ### Frontend Stack:
-- ![React](https://shields.io) **React.js** (Functional Components & Hooks)
-- ![JavaScript](https://shields.io) **JavaScript (ES6+)**
-- ![Bootstrap](https://shields.io) **Bootstrap 5** (UI Framework & Offcanvas)
-- ![CSS3](https://shields.io) **CSS3** (Custom Grid & Media Queries)
+**React.js** (Functional Components & Hooks)
+**JavaScript (ES6+)**
+**Bootstrap 5** (UI Framework & Offcanvas)
+**CSS3** (Custom Grid & Media Queries)
 ### Libraries & Tools:
-- ![Swiper.js](https://shields.io) **Swiper.js** (For interactive sliders)
-- ![FontAwesome](https://shields.io) **FontAwesome** (For vector icons)
-- ![Git](https://shields.io) **Git** (Version Control)
+**Swiper.js** (For interactive sliders)
+**FontAwesome** (For vector icons)
+**Git** (Version Control)
 ### Hosting:
-- ![Netlify](https://shields.io) **Netlify** (Continuous Deployment)
+**Netlify** (Continuous Deployment)
 
-## 📸 Screenshots
-
-To give you a better look at the platform, here are some previews of the design across different devices:
-
-
+### 📸 Project Previews
 | 🖥️ Desktop View | 📱 Mobile View |
 ![Main Screen](./Images/home-screen.png)
