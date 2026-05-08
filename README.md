@@ -43,3 +43,5 @@ The application features:
 
 ## 🔗 Live Demo 
 https://darling-mochi-eb2653.netlify.app/ 
+
+### 👤 Designed and developed by : Jafar
