@@ -29,4 +29,4 @@ The application features:
 
 ### 📸 Project Previews
 | 🖥️ Desktop View | 📱 Mobile View |
-![Main Screen](./Images/home-screen.png)
+<img width="1880" height="912" alt="home-screen" src="https://github.com/user-attachments/assets/fb5b8169-3bf3-4fd4-b506-b61bdde71a03" />
