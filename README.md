@@ -6,7 +6,7 @@ The application features:
 - **Smart Filtering**: An elegant **Offcanvas Sidebar** specifically for search and filtering, keeping the main interface focused on visual content.
 - **Interactive Browsing**: Utilizing **Swiper.js** for smooth carousels and **React State** to manage search selections dynamically.
 - **Responsive Layout**: Built with **Bootstrap 5** and **CSS Grid** to ensure every element, from the Offcanvas menu to the property cards, is pixel-perfect on all devices.
-- 
+  
 ## ✨ Key Features
 - 🔍 **Advanced Filtering System**: Integrated a **Bootstrap Offcanvas** search sidebar, allowing users to filter properties by location, price, and type without cluttering the main UI.
 - 🎬 **Cinematic Visuals**: Implemented a full-screen **Hero Video** background with optimized CSS for a high-end, modern look.
