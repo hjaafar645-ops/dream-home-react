@@ -1,0 +1,100 @@
+/* Proerties Section */
+.proerties-section {
+    background: -webkit-linear-gradient(40deg, #111, #121212);
+    padding-top: 200px;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.row {
+    justify-content: center !important;
+    gap: 40px;
+    margin: auto;
+}
+
+.card {
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 450px;
+}
+
+.image-card {
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-body {
+    background: #000000;
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+    color: rgb(255, 191, 0);
+    font-size: 28px;
+}
+
+.card-location,
+.price-details {
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.card-body p {
+    font-size: 20px;
+    color: beige;
+}
+
+.icon-card {
+    color: rgb(255, 191, 0);
+}
+
+.card:hover {
+    box-shadow: 0 0 9px rgb(255, 191, 0);
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+
+@media (max-width:576px) {
+    .proerties-section {
+        padding-top: 150px;
+    }
+
+    .card {
+        margin: auto;
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-location,
+    .price-details {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+
+    .card-title {
+        font-size: 25px;
+    }
+
+    .card-location,
+    .price-details {
+        font-size: 19px;
+    }
+
+    .card-body p {
+        font-size: 19px;
+    }
+}
