@@ -28,5 +28,18 @@ The application features:
 **Netlify** (Continuous Deployment)
 
 ### 📸 Project Previews
-| 🖥️ Desktop View | 📱 Mobile View |
+| 🖥️ Desktop View |
+### 🏠 Home Page
 <img width="1880" height="912" alt="home-screen" src="https://github.com/user-attachments/assets/fb5b8169-3bf3-4fd4-b506-b61bdde71a03" />
+
+### 🎡 Interactive Property Slider
+<img width="1887" height="701" alt="preview-screen" src="https://github.com/user-attachments/assets/279d75f9-8d24-4e40-b507-3ad85141dfc0" />
+
+### 📖 About Our Brand
+<img width="1727" height="773" alt="about-screen" src="https://github.com/user-attachments/assets/cd85ff3a-67da-4434-82da-f98e92bca0ca" />
+| 📱 Mobile View |
+### 💬 Customer Testimonials (Responsive View)
+<img width="422" height="725" alt="media-screen" src="https://github.com/user-attachments/assets/e3ae9c4d-0e87-4854-bc8d-5b10459dc5e2" />
+
+## 🔗 Live Demo 
+https://darling-mochi-eb2653.netlify.app/ 
