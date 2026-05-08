@@ -12,6 +12,7 @@ The application features:
 - 🎬 **Cinematic Visuals**: Implemented a full-screen **Hero Video** background with optimized CSS for a high-end, modern look.
 - 📱 **Adaptive Grid Layout**: Engineered a custom **CSS Grid & Flexbox** system that ensures property cards are perfectly centered and scaled on all screen sizes.
 - 🎡 **Touch-Optimized Sliders**: Integrated **Swiper.js** for smooth, mobile-friendly property image galleries.
+- ✨ **Dynamic Animations**: Integrated **Framer Motion** for sleek scroll-reveal effects and smooth element transitions.
 - 🛠️ **Component-Based Architecture**: Built with **React.js** for reusable components and efficient state management.
 
 ## 🛠️ Technologies Used
