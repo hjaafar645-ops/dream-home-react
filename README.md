@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## 🏠 About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Golden Key** is a sophisticated Real Estate platform crafted for a premium property discovery experience. The project emphasizes clean UI/UX and seamless interaction.
+The application features:
+- **Cinematic Hero**: A high-impact video background that defines the brand's modern identity.
+- **Smart Filtering**: An elegant **Offcanvas Sidebar** specifically for search and filtering, keeping the main interface focused on visual content.
+- **Interactive Browsing**: Utilizing **Swiper.js** for smooth carousels and **React State** to manage search selections dynamically.
+- **Responsive Layout**: Built with **Bootstrap 5** and **CSS Grid** to ensure every element, from the Offcanvas menu to the property cards, is pixel-perfect on all devices.
+- 
+## ✨ Key Features
+- 🔍 **Advanced Filtering System**: Integrated a **Bootstrap Offcanvas** search sidebar, allowing users to filter properties by location, price, and type without cluttering the main UI.
+- 🎬 **Cinematic Visuals**: Implemented a full-screen **Hero Video** background with optimized CSS for a high-end, modern look.
+- 📱 **Adaptive Grid Layout**: Engineered a custom **CSS Grid & Flexbox** system that ensures property cards are perfectly centered and scaled on all screen sizes.
+- 🎡 **Touch-Optimized Sliders**: Integrated **Swiper.js** for smooth, mobile-friendly property image galleries.
+- 🛠️ **Component-Based Architecture**: Built with **React.js** for reusable components and efficient state management.
 
-## Available Scripts
+## 🛠️ Technologies Used
+### Frontend Stack:
+- ![React](https://shields.io) **React.js** (Functional Components & Hooks)
+- ![JavaScript](https://shields.io) **JavaScript (ES6+)**
+- ![Bootstrap](https://shields.io) **Bootstrap 5** (UI Framework & Offcanvas)
+- ![CSS3](https://shields.io) **CSS3** (Custom Grid & Media Queries)
+### Libraries & Tools:
+- ![Swiper.js](https://shields.io) **Swiper.js** (For interactive sliders)
+- ![FontAwesome](https://shields.io) **FontAwesome** (For vector icons)
+- ![Git](https://shields.io) **Git** (Version Control)
+### Hosting:
+- ![Netlify](https://shields.io) **Netlify** (Continuous Deployment)
 
-In the project directory, you can run:
+## 📸 Screenshots
 
-### `npm start`
+To give you a better look at the platform, here are some previews of the design across different devices:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 🖥️ Desktop View | 📱 Mobile View |
+![Main Screen](./Images/home-screen.png)
