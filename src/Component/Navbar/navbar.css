@@ -185,7 +185,7 @@
 
 .modal:hover .modal-img {
     opacity: 1;
-    transform: translateY(35px);
+    transform: translateY(0);
 }
 
 .close-btn {
