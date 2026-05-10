@@ -17,7 +17,7 @@ The application features:
 
 ## 🛠️ Technologies Used
 ### Frontend Stack:
-**React.js** (Functional Components & Hooks)
+**React.js** (Functional Components & Hooks & React Router Dom)
 **JavaScript (ES6+)**
 **Bootstrap 5** (UI Framework & Offcanvas)
 **CSS3** (Custom Grid & Media Queries)
