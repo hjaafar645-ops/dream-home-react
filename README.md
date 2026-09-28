@@ -50,7 +50,7 @@ The primary flagship presentation featuring our fluid structural components, hig
 
 ![AuraHomes - Flagship Cinematic Viewport]
 <div align="center">
-  <img src="home-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+  <img src="/Images/home-screen.png" alt="Home-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
 </div>
 
 ### 🗺️ 2. Premium Real Estate Listings Avenues (Properties Page)
@@ -58,14 +58,14 @@ The highly curated avenue listing array, displaying responsive cards structured 
 
 ![AuraHomes - Curated Avenues Portfolio]
 <div align="center">
-  <img src="properties-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+  <img src="properties-screen.png" alt="Properties-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
 </div>
 
 ### 🧱 3. Fluid Isolated Specification Matrices (Compare Page)
 Autonomous table-to-card structural transformation. Rows and table components morph dynamically below `576px` into independent stacked asset containers, maintaining exact original emerald icon saturation.
 
 <div align="center">
-  <img src="compare-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+  <img src="compare-screen.png" alt="Compare-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
 </div>
 
 ### 🛡️ 4. System Registry CMS & Core Backend Ledger (Admin Dashboard)
@@ -73,7 +73,7 @@ Our secure operational control layout equipped with dynamic metrics monitoring, 
 
 ![AuraHomes - System Control Center]
 <div align="center">
-  <img src="admin-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+  <img src="admin-screen.png" alt="Admin-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
 </div>
 
 ---
