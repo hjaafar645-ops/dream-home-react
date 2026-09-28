@@ -1,4 +1,4 @@
-<img width="1882" height="920" alt="home-screen" src="https://github.com/user-attachments/assets/64a30758-605c-46c7-b018-1eb12cedb891" /><img width="1882" height="920" alt="home-screen" src="https://github.com/user-attachments/assets/b7eef15b-93dd-42cf-8020-259c466b17b3" /># 🏛️ AuraHomes — Elite Real Estate Platform
+# 🏛️ AuraHomes — Elite Real Estate Platform
 
 > **Centralized Architectural Experience Designed by Jafar**
 > 
