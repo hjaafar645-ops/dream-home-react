@@ -1,197 +1,198 @@
-/* contact-section */
-.contact-content {
-    padding-top: 220px;
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(130deg, #abffe26f 0%, var(--bg-card) 50%);
+    padding-top: 65px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+    max-width: 1200px;
+    margin: 80px auto 100px auto;
+    gap: 50px;
+    flex-grow: 1;
+}
+
+.contact-header {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
-.contact-text {
-    font-size: 32px;
+.contact-badge {
+    color: var(--brand-emerald);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-.contact-line {
+.contact-title {
+    color: var(--brand-emerald-hover);
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.contact-title-line {
     display: block;
-    margin: auto;
-    width: 8%;
-    height: 2px;
-    background-color: rgb(255, 191, 0);
+    width: 90px;
+    height: 3px;
+    background-color: var(--brand-emerald);
+    border-radius: 4px;
 }
 
-/* Contact-cards */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+    width: 100%;
+}
 
-.contact-cards {
+.contact-info-side {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    gap: 24px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--brand-emerald-muted);
+    border-radius: 16px;
+    padding: 24px 28px;
+    gap: 20px;
+    box-shadow: 0 4px 12px rgba(11, 36, 27, 0.562);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.contact-card:hover {
+    transform: translateX(6px);
+    border-color: var(--brand-emerald);
+    box-shadow: 0 15px 35px rgba(27, 94, 70, 0.07);
+}
+
+.contact-icon-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background-color: var(--bg-input);
+    border-radius: 12px;
+    transition: all 0.35s ease;
 }
 
-.contact-card-info {
-    position: relative;
+.contact-icon-box i {
+    font-size: 1.3rem;
+    color: var(--brand-emerald);
+    transition: transform 0.35s ease;
+}
+
+.contact-card:hover .contact-icon-box {
+    background-color: var(--brand-emerald-hover);
+}
+
+.contact-card:hover .contact-icon-box i {
+    color: var(--text-pure-white);
+    transform: scale(1.06);
+}
+
+.contact-txt-block {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    gap: 4px;
+}
+
+.contact-txt-block h3 {
+    color: var(--brand-emerald-hover);
+    font-size: 1.15rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.contact-txt-block p {
+    color: var(--text-main-dark);
+    font-size: 0.98rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-label {
+    color: var(--text-muted-gray);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-map-side {
+    width: 48%;
+}
+
+.map-frame-wrapper {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
+    height: 100%;
+    min-height: 360px;
+    border-radius: 20px;
     overflow: hidden;
-    padding: 20px;
+    border: 2px solid rgba(11, 36, 27, 0.12);
 }
 
-.contact-card-info::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 270%;
-    border-radius: 20px;
-    background: -webkit-linear-gradient(180deg, rgb(255, 170, 0), rgb(255, 170, 0), transparent);
-    animation: rotate 6s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.contact-card-info::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: #222;
-    border-radius: 20px;
-    animation-direction: reverse;
-}
-
-.contact-card-info i {
-    font-size: 35px;
-    color: rgb(255, 191, 0);
-}
-
-.contact-card-info i,
-h4,
-p {
-    z-index: 3;
-}
-
-.contact-card-info h4 {
-    font-size: 25px;
-}
-
-.contact-card-info p {
-    font-size: 20px;
-}
-
-.contact-map {
-    margin-top: 80px;
+.contact-map-core {
     width: 100%;
-    height: 450px;
-    border: 0;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
-/* Responsive */
-
-@media (max-width: 576px) {
-    .contact-cards {
-        flex-direction: column;
-        gap: 50px;
-        margin-top: 70px;
-    }
-
-    .contact-content {
-        padding-top: 170px;
-        text-align: center;
-    }
-
-    .contact-text {
-        font-size: 23px;
-    }
-
-    .contact-line {
-        display: none;
-    }
-
-    .contact-card-info {
+@media (max-width: 991px) {
+    .contact-section {
         width: 90%;
-        height: 250px;
+        margin: 60px auto 60px auto;
+        gap: 35px;
     }
 
-    .contact-card-info i {
-        font-size: 25px;
-        color: rgb(255, 191, 0);
+    .contact-title {
+        font-size: 1.8rem;
     }
 
-    .contact-card-info h4 {
-        font-size: 22px;
-    }
-
-    .contact-card-info p {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .contact-cards {
+    .contact-grid {
         flex-direction: column;
-        gap: 50px;
-        margin-top: 70px;
+        gap: 35px;
     }
 
-    .contact-content {
-        padding-top: 170px;
-        text-align: center;
+    .contact-info-side {
+        width: 100%;
+        gap: 16px;
     }
 
-    .contact-text {
-        font-size: 23px;
+    .contact-card {
+        padding: 20px;
     }
 
-    .contact-line {
-        display: none;
+    .contact-card:hover {
+        transform: translateY(-4px);
     }
 
-    .contact-card-info {
-        width: 90%;
-        height: 250px;
+    .contact-map-side {
+        width: 100%;
     }
 
-    .contact-card-info i {
-        font-size: 28px;
-        color: rgb(255, 191, 0);
+    .map-frame-wrapper {
+        height: 280px;
+        min-height: 280px;
     }
-
-    .contact-card-info h4 {
-        font-size: 24px;
-    }
-
-    .contact-card-info p {
-        font-size: 22px;
-    }
-
-    .contact-card-info::before {
-        width: 370px;
-        height: 320%;
-    }
-}
-
-@media (min-width:767px) and (max-width:991px) {
-
-    .contact-content {
-        padding-top: 180px;
-    }
-
-    .contact-cards {
-        margin-top: 70px;
-    }
-
-    .contact-line {
-        display: none;
-    }
-
 }

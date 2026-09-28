@@ -1,157 +1,97 @@
-import "../Preview/Preview.css"
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { propertyContext } from '../../Pages/context/propertyContext'; 
+import './Preview.css'; 
+
 function Preview() {
-    const [swiperRef, setSwiperRef] = useState(null);
-    return (
-        <div>
-            <section className="container-fluid">
-                <div className="header-section-title">
-                    <h2 className='preview-prop'> Featured Properties </h2>
-                    <span className="line-title"></span>
-                </div>
-                <div className="preview-content">
-                    <Swiper
-                        onSwiper={setSwiperRef}
-                        slidesPerView={3}
-                        centeredSlides={true}
-                        spaceBetween={30}
-                        modules={[Pagination, Navigation, Autoplay]}
-                        loop={true}
-                        autoplay={{ delay: 0, disableOnInteraction: false }}
-                        speed={6000}
-                        breakpoints={{
-                            991: { slidesPerView: 3 },
-                            767: { slidesPerView: 2 },
-                        }}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide className="swiper-cards">
-                            <div className="card-content">
-                                <img src="/Images/modernVilla.jpg" alt="modern-house" className="image-swiper-card"></img>
-                                <h3> Modern Villa </h3>
-                                <h4> London </h4>
-                                <p> month / 2,700$ </p>
-                            </div>
-                        </SwiperSlide>
 
-                        <SwiperSlide className="swiper-cards">
-                            <div className="card-content">
-                                <img src="/Images/dublexAppartement2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                                <h3> Dublex Apartment </h3>
-                                <h4> London </h4>
-                                <p> month / 2,200$ </p>
-                            </div>
-                        </SwiperSlide>
+  /*========== ForContext ==========*/
+  const { setSearch, scrollToTop } = useContext(propertyContext);
 
-                        <SwiperSlide className="swiper-cards">
-                            <div className="card-content">
-                                <img src="/Images/mansion.jpg" alt="modern-house" className="image-swiper-card"></img>
-                                <h3> Luxury Mansion </h3>
-                                <h4> London </h4>
-                                <p> month / 5000$ </p>
-                            </div>
-                        </SwiperSlide>
+  /*========== Navigate ==========*/
+  const navigate = useNavigate();
 
-                        <SwiperSlide className="swiper-cards">
-                            <div className="card-content">
-                                <img src="/Images/dublexAppartement.jpg" alt="modern-house" className="image-swiper-card"></img>
-                                <h3> Dublex Apartment </h3>
-                                <h4> London </h4>
-                                <p> month / 3000$ </p>
-                            </div>
-                        </SwiperSlide>
+  /*========== HandleClick/ForScroll ==========*/
+  const handleDistrictClick = (districtName) => {
+    setSearch(districtName);
+    if (typeof scrollToTop === 'function') {
+      scrollToTop(); 
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+    navigate('/Properties'); 
+  };
 
-                        <SwiperSlide className="swiper-cards">
-                            <div className="card-content">
-                                <img src="/Images/modernHouse2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                                <h3> Modern House </h3>
-                                <h4> London </h4>
-                                <p> month / 2,300$ </p>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
+  return (
+    <section className="preview-component">
+      <div className="preview-container">
+        
+        <div className="preview-header">
+          <span className="preview-badge">Explore Elite London Districts</span>
+          <h2 className="preview-main-title">Our Premium Destinations</h2>
+        </div> {/*===== preview-header =====*/}
 
-                    <div className="mobile-cards">
-                        <div className="card-content">
-                            <img src="/Images/modernVilla.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Modern Villa </h3>
-                            <h4> London </h4>
-                            <p> month / 2,700$ </p>
-                        </div>
+        <div className="location-grid">
+          
+          <article className="location-card" onClick={() => handleDistrictClick("Chelsea")}>
+            <div className="card-bg">
+              <img src="/Images/modernVilla.jpg" alt="Chelsea District" className="preview-card-img" loading="eager" decoding="sync" />
+            </div>
+            <div className="card-glass-overlay"></div>
+            <div className="card-info-content">
+              
+              <div className="preview-card-text">
+                <h3 className="preview-card-title">Chelsea</h3>
+                <p className="preview-card-subtitle">Exclusive Mansions & Estates</p>
+              </div>
+              
+              <button className="preview-circle-btn" type="button" title="Explore Chelsea">
+                <i className="bi bi-arrow-up-right"></i>
+              </button>
+            </div> {/*===== card-info-content =====*/}
+          </article> {/*===== location-card =====*/}
 
-                        <div className="card-content">
-                            <img src="/Images/dublexAppartement2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Dublex Apartment </h3>
-                            <h4> London </h4>
-                            <p> month / 2,200$ </p>
-                        </div>
+          <article className="location-card" onClick={() => handleDistrictClick("Kensington")}>
+            <div className="card-bg">
+              <img src="/Images/WhiteLuxuryVilla.jpg" alt="Kensington District" className="preview-card-img" loading="eager" decoding="sync" />
+            </div>
+            <div className="card-glass-overlay"></div>
+            <div className="card-info-content">
+              
+              <div className="preview-card-text">
+                <h3 className="preview-card-title">Kensington</h3>
+                <p className="preview-card-subtitle">Luxury Waterfront Penthouses</p>
+              </div>
+              
+              <button className="preview-circle-btn" type="button" title="Explore Kensington">
+                <i className="bi bi-arrow-up-right"></i>
+              </button>
+            </div> {/*===== card-info-content =====*/}
+          </article> {/*===== location-card =====*/}
 
-                        <div className="card-content">
-                            <img src="/Images/mansion.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Luxury Mansion </h3>
-                            <h4> London </h4>
-                            <p> month / 5000$ </p>
-                        </div>
+          <article className="location-card" onClick={() => handleDistrictClick("Westminster")}>
+            <div className="card-bg">
+              <img src="/Images/modernStudio.jpg" alt="Westminster District" className="preview-card-img" loading="eager" decoding="sync" />
+            </div>
+            <div className="card-glass-overlay"></div>
+            <div className="card-info-content">
+              
+              <div className="preview-card-text">
+                <h3 className="preview-card-title">Westminster</h3>
+                <p className="preview-card-subtitle">Premium Skyline Apartments</p>
+              </div>
+              
+              <button className="preview-circle-btn" type="button" title="Explore Westminster">
+                <i className="bi bi-arrow-up-right"></i>
+              </button>
+            </div> {/*===== card-info-content =====*/}
+          </article> {/*===== location-card =====*/}
 
-                        <div className="card-content">
-                            <img src="/Images/dublexAppartement.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Dublex Apartment </h3>
-                            <h4> London </h4>
-                            <p> month / 3000$ </p>
-                        </div>
+        </div> {/*===== location-grid =====*/}
 
-                        <div className="card-content">
-                            <img src="/Images/modernHouse2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Modern House </h3>
-                            <h4> London </h4>
-                            <p> month / 2,300$ </p>
-                        </div>
-                    </div>
-
-                    <div className="tablet-cards">
-                        <div className="card-content">
-                            <img src="/Images/modernVilla.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Modern Villa </h3>
-                            <h4> London </h4>
-                            <p> month / 2,700$ </p>
-                        </div>
-
-                        <div className="card-content">
-                            <img src="/Images/dublexAppartement2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Dublex Apartment </h3>
-                            <h4> London </h4>
-                            <p> month / 2,200$ </p>
-                        </div>
-
-                        <div className="card-content">
-                            <img src="/Images/mansion.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Luxury Mansion </h3>
-                            <h4> London </h4>
-                            <p> month / 5000$ </p>
-                        </div>
-
-                        <div className="card-content">
-                            <img src="/Images/dublexAppartement.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Dublex Apartment </h3>
-                            <h4> London </h4>
-                            <p> month / 3000$ </p>
-                        </div>
-
-                        <div className="card-content">
-                            <img src="/Images/modernHouse2.jpg" alt="modern-house" className="image-swiper-card"></img>
-                            <h3> Modern House </h3>
-                            <h4> London </h4>
-                            <p> month / 2,300$ </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    )
+      </div>
+    </section>
+  );
 }
 
-export default Preview
+export default Preview;

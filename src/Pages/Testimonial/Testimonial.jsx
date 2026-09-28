@@ -1,12 +1,11 @@
 import Review from "../../Component/Reviews/review"
+
 function Testimonial() {
-    return (
-        <div>
-            <main>
-                <Review />
-            </main>
-        </div>
-    )
+  return (
+    <section className="testimonial-section">
+      <Review />
+    </section>
+  )
 }
 
-export default Testimonial
+export default Testimonial;

@@ -1,48 +1,79 @@
-import { Link } from "react-router-dom"
-import "../Footer/footer.css"
-function footer() {
-    return (
-        <div>
-            <footer className="footer-section">
-                <div className="footer-content">
-                    <div className="foot-left">
-                        <img src="/Images/logo.png" alt="logo2" className="foot-img" />
-                        <p> Helping you find the perfect place to call home in London . </p>
-                        <div className="left-icon">
-                            <a href="#">  <i className="bi bi-facebook" style={{ color: "#1877f2" }}></i> </a>
-                            <a href="#">  <i className="bi bi-whatsapp" style={{ color: "#25d366" }}></i> </a>
-                            <a href="#">  <i className="bi bi-twitter-x" style={{ color: "#ffffff" }}></i> </a>
-                        </div>
-                    </div>
+import { Link } from "react-router-dom";
+import { propertyContext } from "../../Pages/context/propertyContext";
+import { useContext } from "react";
+import "../Footer/footer.css";
 
-                    <div className="foot-centre">
-                        <h3> Quick Links </h3>
-                        <ul>
-                            <li> <Link to="/"> Home </Link> </li>
-                            <li> <Link to="/Properties"> Properties </Link> </li>
-                            <li> <Link to="/Services"> Services </Link> </li>
-                            <li> <Link to="/About"> About </Link> </li>
-                            <li> <Link to="/Testimonial"> Testimonial </Link> </li>
-                            <li> <Link to="/Contact"> Contact </Link> </li>
-                        </ul>
-                    </div>
+function Footer() {
 
-                    <div className="foot-right">
-                        <h3> Achievements </h3>
-                        <ul>
-                            <li> <i className="bi bi-quote"></i> 10+ Years of Excellence in Real Estate . </li>
-                            <li> <i className="bi bi-quote"></i> 600+ Happy Clients Served . </li>
-                            <li> <i className="bi bi-quote"></i> Awarded Best Real Estate Agency 2026 . </li>
-                        </ul>
-                    </div>
-                </div>
-                <span className="line-fin"></span>
-                <p className="foot-bottom">
-                    &copy; 2026 Luxury <span style={{ color: "rgb(255, 191, 0)" }}>Golden</span>Key. All rights reserved. | Designed by Jaafar
-                </p>
-            </footer>
-        </div>
-    )
+  /*========== Context ==========*/
+  const { scrollToTop } = useContext(propertyContext)
+
+  return (
+
+    <footer className="footer-section">
+      <div className="footer-container">
+
+        <div className="footer-top-brand">
+
+          <div className="brand-block">
+            <h2 className="footer-brand-logo-txt">AuraHomes</h2>
+            <p className="footer-brand-tagline">Architectural Masterpieces & Elite London Concierge</p>
+          </div>
+
+          <nav className="footer-nav" aria-label="Footer Navigation">
+            <ul className="footer-links-list">
+              <li> <Link to="/" onClick={scrollToTop}>Home</Link> </li>
+              <li> <Link to="/Properties" onClick={scrollToTop}>Properties</Link> </li>
+              <li> <Link to="/Services" onClick={scrollToTop}>Services</Link> </li>
+              <li> <Link to="/About" onClick={scrollToTop}>About</Link> </li>
+              <li> <Link to="/Testimonial" onClick={scrollToTop}>Testimonial</Link> </li>
+              <li> <Link to="/Contact" onClick={scrollToTop}>Contact</Link> </li>
+            </ul>
+          </nav> {/*===== footer-nav =====*/}
+
+        </div> {/*===== footer-top-brand =====*/}
+
+        <span className="footer-line"></span>
+
+        <div className="footer-achievements">
+
+          <div className="footer-badges">
+            <div className="achievement-badge">
+              <i className="bi bi-patch-check-fill"></i>
+              <span>10+ Years Excellence</span>
+            </div>
+            <div className="achievement-badge">
+              <i className="bi bi-patch-check-fill"></i>
+              <span>600+ VIP Clients</span>
+            </div>
+            <div className="achievement-badge">
+              <i className="bi bi-patch-check-fill"></i>
+              <span>Best Agency 2026</span>
+            </div>
+          </div> {/*===== footer-badges =====*/}
+
+          <div className="footer-social">
+            <a href="#" aria-label="Facebook"> <i className="bi bi-facebook"></i> </a>
+            <a href="#" aria-label="WhatsApp"> <i className="bi bi-whatsapp"></i> </a>
+            <a href="#" aria-label="Twitter"> <i className="bi bi-twitter-x"></i> </a>
+          </div>
+
+        </div> {/*===== footer-achievements =====*/}
+
+        <span className="footer-line"></span>
+
+        <div className="footer-bottom">
+          <p className="legal-text">
+            &copy; 2026 Luxury <span className="brand-glow">AuraHomes</span>. All rights reserved.
+          </p>
+          <p className="designer">
+            Centralized Architectural Experience Designed by <span className="designer-name">Jafar</span>
+          </p>
+        </div> {/*===== footer-bottom =====*/}
+
+      </div> {/*===== footer-container =====*/}
+    </footer>
+  )
 }
 
-export default footer
+export default Footer;

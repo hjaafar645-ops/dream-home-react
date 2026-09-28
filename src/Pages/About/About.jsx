@@ -1,60 +1,76 @@
-import "../About/About.css"
 import { motion } from "framer-motion"
+import "../About/About.css"
+
 function About() {
 
-  const lines = [
-    "we are a modern real estate company dedicated to helping people",
-    "find their perfect homes .Our team provides trusted listings, detailed",
-    "property insights, and professional guidance to make your home",
-    "search simple and strees-free ."
-  ]
+  /*========== Motion-Variants ==========*/
+  const fv = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 65, damping: 16 }
+    }
+  };
 
   return (
-    <div>
-      <main>
-        <section className="about-section">
-          <div className="about-content">
-            <motion.div className="about-img"
-              initial={{ opacity: 0, y: 150 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}>
-              <img src="/Images/givinKey.jpg" alt="house-keys-handover" />
-            </motion.div>
-            <div className="about-text">
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.6 }}
-              >
-                About Us
-              </motion.h2>
-              {lines.map((line, index) => {
-                return (
-                  <motion.p key={index}
-                    initial={{ opacity: 0, y: 120 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: index * 0.4 }}
-                  >
-                    {line}
-                  </motion.p>
-                )
-              }
-              )}
-              <motion.div className="features-list"
-                initial={{ opacity: 0, y: 120 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}>
-                <span> <i class="bi bi-check-circle"></i> Trusted Properties </span>
-                <span> <i class="bi bi-check-circle"></i> Best Market Prices </span>
-                <span> <i class="bi bi-check-circle"></i> Easy Search & Filtering </span>
-                <span> <i class="bi bi-check-circle"></i> Customer Support 24/7 </span>
-              </motion.div>
+    <section className="about-compone">
+      <div className="about-section">
+
+        <div className="about-visuals-side">
+          <motion.div
+            className="about-main-frame"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={fv}
+          >
+            <img src="/Images/mansion.jpg" alt="AuraHomes Elite Estate" className="img-back" />
+
+            <div className="mini-img">
+              <img src="/Images/givinKey.jpg" alt="Keys Handover" className="img-front" />
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
+          </motion.div>
+        </div> {/*===== about-visuals-side =====*/}
+
+        <div className="about-text-side">
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fv} className="about-header">
+            <span className="about-badge">The House of Aura</span>
+            <h2 className="about-title">Crafting Peerless Living Experiences</h2>
+          </motion.div>
+
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fv} className="about-description">
+            We are an elite real estate boutique dedicated to elevating architectural benchmarks and helping visionaries acquire their peerless residences across London. Our specialized concierge team delivers verified high-end listings, comprehensive asset tracking, and uncompromised professional guidance to render your property journey effortlessly refined.
+          </motion.p>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fv} className="about-stats">
+            <div className="stat-box">
+              <h3>£1.4B+</h3>
+              <p>Assets Managed</p>
+            </div>
+            <div className="stat-box">
+              <h3>98.4%</h3>
+              <p>Client Retention</p>
+            </div>
+            <div className="stat-box">
+              <h3>15+ Years</h3>
+              <p>Elite Concierge</p>
+            </div>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fv} className="about-trust-badges">
+            <span className="badge-item-lux"> <i className="bi bi-patch-check-fill"></i> Elite Curated Portfolios </span>
+            <span className="badge-item-lux"> <i className="bi bi-patch-check-fill"></i> Optimal Investment Value </span>
+            <span className="badge-item-lux"> <i className="bi bi-patch-check-fill"></i> Centralized Concierge Search </span>
+            <span className="badge-item-lux"> <i className="bi bi-patch-check-fill"></i> 24/7 Dedicated Management </span>
+          </motion.div>
+
+        </div> {/*===== about-text-side =====*/}
+
+      </div> {/*===== about-section =====*/}
+    </section>
   )
 }
 
-export default About
+export default About;

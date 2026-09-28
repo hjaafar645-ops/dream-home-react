@@ -1,155 +1,163 @@
-  .services-section {
-      background: -webkit-linear-gradient(240deg, #111, #9a9898);
-      height: auto;
-      padding-bottom: 40px;
-  }
+.services-page {
+    width: 100%;
+    background: linear-gradient(130deg, #abffe26f 0%, var(--bg-card) 50%);
+    padding: 150px 0 120px 0;
+}
 
-  .services-title {
-      margin-top: 200px;
-      text-align: center;
-  }
+.services-section {
+    width: 84%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-  .services-line {
-      display: block;
-      width: 130px;
-      height: 2px;
-      background: rgb(255, 191, 0);
-      margin: auto;
-      text-align: center;
-  }
+.services-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 70px;
+}
 
-  .services-section:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20%;
-      height: 100%;
-      background-image: -webkit-radial-gradient(rgb(255, 170, 0) 1px, transparent 1px);
-      background-size: 10px 10px;
-  }
+.services-badge {
+    color: var(--brand-emerald);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
 
-  .services-section::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 200px;
-      background: -webkit-radial-gradient(circle at 50% 0%, #222 20%, transparent 70%);
-  }
+.services-main-title {
+    color: var(--brand-emerald-hover);
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
 
-  /* Services-cards */
+.services-title-line {
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: var(--brand-emerald);
+    border-radius: 4px;
+}
 
-  .services-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      gap: 40px;
-      margin-top: 70px;
-  }
+.services-landscape {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
 
-  .card-services-content {
-      position: relative;
-      background: #222;
-      width: 100%;
-      max-width: 400px;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      border-radius: 20px;
-  }
+.landscape-service-item {
+    background-color: var(--bg-card);
+    border: 1px solid rgb(216, 214, 214);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(11, 36, 27, 0.562);
+    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-  .card-services-content i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -290%);
-      color: rgb(255, 255, 255);
-      font-size: 45px;
-      z-index: 2;
-  }
+.landscape-service-item:hover {
+    transform: scale(1.015);
+    border-color: var(--brand-emerald);
+    box-shadow: 0 25px 55px rgba(27, 94, 70, 0.08);
+}
 
-  .card-services-content h3 {
-      color: rgb(255, 170, 0);
-      z-index: 2;
-      margin-top: 30px;
-  }
+.item-inverse-lux {
+    flex-direction: row-reverse;
+}
 
-  .card-services-content p {
-      font-size: 17px;
-      z-index: 2;
-  }
+.landscape-img-side {
+    width: 45%;
+    height: 320px;
+    overflow: hidden;
+}
 
-  @media (max-width: 576px) {
-      .services-title {
-          margin-top: 170px;
-      }
+.landscape-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
 
-      .services-line {
-          display: none;
-      }
+.landscape-service-item:hover .landscape-img {
+    transform: scale(1.04);
+}
 
-      .services-cards {
-          grid-template-columns: 1fr;
-      }
+.landscape-info-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 55%;
+    padding: 40px 45px;
+}
 
-      .card-services-content i {
-          font-size: 30px;
-          transform: translate(-50%, -450%);
-      }
+.landscape-badge-num {
+    font-size: 1.8rem;
+    font-weight: 950;
+    color: rgb(191, 188, 188);
+    font-family: monospace;
+    margin-bottom: 12px;
+}
 
-      .card-services-content h3 {
-          font-size: 20px;
-      }
+.landscape-service-item:hover .landscape-badge-num {
+    color: var(--brand-emerald);
+}
 
-      .card-services-content p {
-          font-size: 16px;
-      }
-  }
+.landscape-card-title {
+    color: var(--brand-emerald-hover);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+}
 
-  @media (min-width: 576px) and (max-width: 767px) {
-      .services-title {
-          margin-top: 170px;
-      }
+.landscape-card-subtitle {
+    color: var(--text-main-dark);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+}
 
-      .services-cards {
-          grid-template-columns: 1fr;
-      }
+/*========== Meida ==========*/
 
-      .services-line {
-          display: none;
-      }
+@media (max-width: 991px) {
+    .services-page {
+        padding: 130px 0 120px 0;
+    }
 
-      .card-services-content i {
-          font-size: 32px;
-          transform: translate(-50%, -400%);
-      }
-  }
+    .spatial-services-component {
+        padding: 85px 0 60px 0;
+    }
 
-  @media (min-width: 768px) and (max-width: 991px) {
-      .services-title {
-          margin-top: 170px;
-      }
+    .services-section {
+        width: 90%;
+    }
 
-      .services-line {
-          display: none;
-      }
+    .services-main-title {
+        font-size: 1.8rem;
+    }
 
-      .services-cards {
-          grid-template-columns: 1fr;
-      }
+    .landscape-service-item,
+    .item-inverse-lux {
+        flex-direction: column;
+    }
 
-      .card-services-content {
-          width: 60%;
-      }
+    .landscape-img-side {
+        width: 100%;
+        height: 220px;
+    }
 
-      .card-services-content i {
-          font-size: 40px;
-          transform: translate(-50%, -340%);
-      }
-  }
+    .landscape-info-side {
+        width: 100%;
+        padding: 30px 24px;
+    }
+}

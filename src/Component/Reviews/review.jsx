@@ -1,71 +1,131 @@
 import { motion } from "framer-motion"
 import "../Reviews/review.css"
+
 function Review() {
+
+  /*========== Motion-Variants ==========*/
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.18 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 35 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 75, damping: 16 }
+    }
+  };
+
   return (
-    <div>
-      <section className="testimonial-section">
-        <div className="testi-title">
-          <h2 className="testi-text"> What Our Clients Say </h2>
-          <span className="testi-line"></span>
-        </div>
-        <div className="testimonial-content">
-          <motion.div className="review-card"
-            initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}>
-            <h3 className="review-name"> Michael Thompson <i class="bi bi-patch-check-fill" style={{ color: "#0091ff" }}></i> </h3>
-            <p className="review-text"> I had an amazing experience! finding my dream home with this company .
-              The team was professional and guided me every step of the way .
-            </p>
-            <div className="review-icons">
-              <i className="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <img className="review-img" src="/Images/client2.jpg" alt="client-2" />
-          </motion.div>
+    <motion.section
+      className="spatial-testimonial"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={containerVariants}
+    >
+      <div className="testimonial-section-container">
 
-          <motion.div className="review-card"
-            initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}>
-            <h3 className="review-name"> Sarah Williams <i class="bi bi-patch-check-fill" style={{ color: "#0091ff" }}></i> </h3>
-            <p className="review-text"> The team was incredibly helpful throughout the entire process. They made
-              everything simple <br></br>, clear, and stress-free. I highly recommend their service.
-            </p>
-            <div className="review-icons">
-              <i className="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <img className="review-img" src="/Images/client3.jpg" alt="client-3" />
-          </motion.div>
+        <div className="testi-showcase-panel">
+          <div className="testi-box">
+            <span className="testi-badge">Verified Social Proof</span>
+            <h2 className="testi-title">What Our Elite Clients Say</h2>
+            <span className="testi-title-line"></span>
 
-          <motion.div className="review-card"
-            initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}>
-            <h3 className="review-name"> Daniel Carter <i class="bi bi-patch-check-fill" style={{ color: "#0091ff" }}></i> </h3>
-            <p className="review-text"> Professional, reliable, and very responsive. They understood exactly what
-              i was looking for and helped me find the perfect property.
+            <p className="testi-showcase-description">
+              Uncompromising loyalty from London's most discerning property investors and premium homeowners.
             </p>
-            <div className="review-icons">
-              <i className="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-half"></i>
+
+            <div className="testi-rating-giant-box">
+              <div className="giant-rating-num">4.9</div>
+              <div className="giant-rating-meta">
+                <div className="giant-stars-row">
+                  <i className="bi bi-star-fill"></i>
+                  <i className="bi bi-star-fill"></i>
+                  <i className="bi bi-star-fill"></i>
+                  <i className="bi bi-star-fill"></i>
+                  <i className="bi bi-star-fill"></i>
+                </div>
+                <p>Audited Platform Satisfaction <i className="bi bi-patch-check-fill review-badge-emerald"></i></p>
+              </div>
             </div>
-            <img className="review-img" src="/Images/client1.jpg" alt="client-1" />
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </div> {/*===== testi-rating-giant-box =====*/}
+        </div> {/*===== testi-box =====*/}
+
+        <div className="testimonial-timeline">
+          <motion.article className="review-card" variants={cardVariants}>
+            <div className="review-profile-footer">
+              <img className="review-img" src="/Images/client2.jpg" alt="Michael Thompson" />
+              <div className="avatar-meta-txt">
+                <h3>Michael Thompson</h3>
+                <p>Premium Homeowner <i className="bi bi-patch-check-fill review-badge-emerald"></i></p>
+              </div>
+            </div>
+            <div className="review-card-stars">
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+            </div>
+            <p className="review-card-text">
+              "An unparalleled acquisition experience. The concierge tailored our Chelsea villa integration
+              with strict fiduciary precision, rendering the entire bespoke transaction beautifully transparent and secure."
+            </p>
+          </motion.article> {/*===== review-card =====*/}
+
+          <motion.article className="review-card" variants={cardVariants}>
+            <div className="review-profile-footer">
+              <img className="review-img" src="/Images/client3.jpg" alt="Sarah Williams" />
+              <div className="avatar-meta-txt">
+                <h3>Sarah Williams</h3>
+                <p>Corporate Client <i className="bi bi-patch-check-fill review-badge-emerald"></i></p>
+              </div>
+            </div>
+            <div className="review-card-stars">
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+            </div>
+            <p className="review-card-text">
+              "Managing multi-million dollar corporate assets requires absolute operational excellence.
+              AuraHomes consistently delivers high-fidelity residential auditing, immaculate corporate rentals, and zero stress."
+            </p>
+          </motion.article> {/*===== review-card =====*/}
+
+          <motion.article className="review-card" variants={cardVariants}>
+            <div className="review-profile-footer">
+              <img className="review-img" src="/Images/client1.jpg" alt="Daniel Carter" />
+              <div className="avatar-meta-txt">
+                <h3>Daniel Carter</h3>
+                <p>Mayfair Investor <i className="bi bi-patch-check-fill review-badge-emerald"></i></p>
+              </div>
+            </div>
+            <div className="review-card-stars">
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-fill"></i>
+              <i className="bi bi-star-half"></i>
+            </div>
+            <p className="review-card-text">
+              "Uncompromisingly professional, reliable,
+              and exceptionally responsive. They instantly grasped the exact architectural nuances
+              I was seeking and confidently captured the perfect off-market Mayfair estate."
+            </p>
+          </motion.article> {/*===== review-card =====*/}
+
+        </div> {/*===== testi-showcase-panel =====*/}
+      </div> {/*===== testimonial-section-container =====*/}
+    </motion.section>
   )
 }
 
-export default Review
+export default Review;

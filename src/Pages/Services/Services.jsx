@@ -1,70 +1,95 @@
-import "../Services/Services.css"
 import { motion } from "framer-motion"
+import "../Services/Services.css"
+
 function Services() {
-    return (
-        <div>
-            <main>
-                <section className="services-section">
-                    <div className="services-title">
-                        <h2 className="services-title"> Our Services </h2>
-                        <span className="services-line"></span>
-                    </div>
-                    <div className="container">
-                        <div className="services-cards">
-                            <motion.div className="card-services-content"
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                            >
-                                <i className="fa fa-home"></i>
-                                <h3> Buying Property </h3>
-                                <p> We help you find the perfect property to buy, whether it's a house, apartment
-                                    , or commercial space. Our team of experts will guide you through the entire buying process
-                                    , ensuring a smooth and successful transaction.
-                                </p>
-                            </motion.div>
 
-                            <motion.div className="card-services-content"
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.4 }}
-                            >
-                                <i className="fa fa-building"></i>
-                                <h3> Renting Property  </h3>
-                                <p> Discover the perfect rental that fits your needs and budget.
-                                    Our team of experts will help you find the ideal property to call home.
-                                </p>
-                            </motion.div>
+  /*========== Card-Motion ==========*/
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 65, damping: 16 }
+    }
+  };
 
-                            <motion.div className="card-services-content"
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.6 }}
-                            >
-                                <i className="fa fa-money"></i>
-                                <h3> Mortgage Property </h3>
-                                <p> Secure financial solutions for your property needs. Our experts help you manage mortgage efficiently and safely .
-                                </p>
-                            </motion.div>
+  return (
+    <section className="services-page">
+      <div className="services-section">
 
-                            <motion.div className="card-services-content"
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.8 }}
-                            >
-                                <i className="fa fa-wrench"></i>
-                                <h3> Property Details & Features </h3>
-                                <p> Get complete information about each property :
-                                    number of bedrooms, bathrooms, pricing,
-                                    and all essential details to make informed decisions about your real estate investments.
-                                </p>
-                            </motion.div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-    )
+        <div className="services-header">
+          <span className="services-badge">Centralized Property Services</span>
+          <h2 className="services-main-title">Our Capabilities</h2>
+          <span className="services-title-line"></span>
+        </div> {/*===== services-header =====*/}
+
+        <div className="services-landscape">
+          <motion.article
+            className="landscape-service-item"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={cardVariants}
+          >
+            <div className="landscape-img-side">
+              <img src="/Images/img-service(1).jpg" alt="our-service/ex:pathroom" className="landscape-img" />
+            </div>
+            <div className="landscape-info-side">
+              <div className="landscape-badge-num">01</div>
+              <h3 className="landscape-card-title">Bespoke Financial & Mortgage Strategies</h3>
+              <p className="landscape-card-subtitle">
+                Secure specialized and confidential financial solutions.
+                Our elite asset experts optimize luxury mortgage planning efficiently,
+                safely, and transparently to build the foundation of your investment.
+              </p>
+            </div>
+          </motion.article> {/*===== landscape-service-item =====*/}
+
+          <motion.article
+            className="landscape-service-item item-inverse-lux"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={cardVariants}
+          >
+            <div className="landscape-img-side">
+              <img src="/Images/img-service(2).png" alt="our-service/ex:mini-home" className="landscape-img" />
+            </div>
+            <div className="landscape-info-side">
+              <div className="landscape-badge-num">02</div>
+              <h3 className="landscape-card-title">Curated Portfolio Acquisition & Rental</h3>
+              <p className="landscape-card-subtitle">
+                Unveiling an exclusive selection of architectural masterpieces for sale or rent across Mayfair,
+                Knightsbridge, and Chelsea. We match your ultra-high-net-worth lifestyle with peerless property curation.
+              </p>
+            </div>
+          </motion.article> {/*===== landscape-service-item =====*/}
+
+          <motion.article
+            className="landscape-service-item"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={cardVariants}
+          >
+            <div className="landscape-img-side">
+              <img src="/Images/img-service(3).jpg" alt="our-service/ex:our-plans" className="landscape-img" />
+            </div>
+            <div className="landscape-info-side">
+              <div className="landscape-badge-num">03</div>
+              <h3 className="landscape-card-title">Rigorous Property Architecture Metrics</h3>
+              <p className="landscape-card-subtitle">
+                Gain absolute, uncompromising clarity on custom interior layouts, premium material tracking,
+                and architectural specifications. We deliver detailed unit mapping so you make highly informed decisions.
+              </p>
+            </div>
+          </motion.article> {/*===== landscape-service-item =====*/}
+
+        </div> {/*===== services-landscape =====*/}
+
+      </div> {/*===== services-section =====*/}
+    </section>
+  )
 }
 
-export default Services
+export default Services;
