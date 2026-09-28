@@ -48,24 +48,33 @@ Every element, from the glassmorphic floating navigation capsule to the fully is
 ### 💻 1. Flagship Cinematic Showcase (Home Page)
 The primary flagship presentation featuring our fluid structural components, high-fidelity real estate typography, and our automated glassmorphic header capsule that responsive-shrinks upon scroll.
 
-![AuraHomes - Flagship Cinematic Viewport](./Images/home-screen.png)
+![AuraHomes - Flagship Cinematic Viewport]
+<div align="center">
+  <img src="home-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+</div>
 
 ### 🗺️ 2. Premium Real Estate Listings Avenues (Properties Page)
 The highly curated avenue listing array, displaying responsive cards structured over custom CSS grids with anti-distortion image-fit armor to lock layout ratios flawlessly across hardware.
 
-![AuraHomes - Curated Avenues Portfolio](./Images/properties-screen.png)
+![AuraHomes - Curated Avenues Portfolio]
+<div align="center">
+  <img src="properties-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+</div>
 
-### 🧱 3. Fluid Isolated Specification Matrices (Compare Page - Mobile View)
+### 🧱 3. Fluid Isolated Specification Matrices (Compare Page)
 Autonomous table-to-card structural transformation. Rows and table components morph dynamically below `576px` into independent stacked asset containers, maintaining exact original emerald icon saturation.
 
-<p align="center">
-  <img src="./Images/compare-screen.png"/>
-</p>
+<div align="center">
+  <img src="compare-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+</div>
 
 ### 🛡️ 4. System Registry CMS & Core Backend Ledger (Admin Dashboard)
 Our secure operational control layout equipped with dynamic metrics monitoring, instant CRUD property asset injection, and the custom global fallback emergency **Reset Factory Data** panel.
 
-![AuraHomes - System Control Center](./Images/admin-screen.png)
+![AuraHomes - System Control Center]
+<div align="center">
+  <img src="admin-screen.png" alt="TechNexus Space Banner" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+</div>
 
 ---
 
