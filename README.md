@@ -50,7 +50,7 @@ The primary flagship presentation featuring our fluid structural components, hig
 
 ![AuraHomes - Flagship Cinematic Viewport]
 <div align="center">
-  <img src="/Images/home-screen.png" alt="Home-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
+  <img src="home-screen.png" alt="Home-page" width="100%" style="border-radius: 8px; border: 1px solid #00f0ff; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);"/>
 </div>
 
 ### 🗺️ 2. Premium Real Estate Listings Avenues (Properties Page)
@@ -86,4 +86,4 @@ Experience the high-fidelity flagship deploy live on the cloud:
 
 ---
 
-### 👤 Designed, engineered, and mathematically compiled by: JAFAR
+### 👤 Designed and engineered compiled by: JAFAR
